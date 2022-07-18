@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const fname = "Dark" , lname = "Batman" ;
+
 ReactDOM.render(
     <>
-        <h1>Top 5 Netflix Series (personal choice)</h1> 
-        <p>- yash pandey </p>
-        <ol>
-            <li>Breaking Bad</li>
-            <li>Stranger Things</li>
-            <li>Money Heist</li>
-            <li>squid game</li>
-            <li>Lucifer</li>
-        </ol>
+        <h1>{`My name is ${fname} ${lname}`}</h1>
+        <p>{`But you can call me just "${lname}" 😂`}</p>
     </>
 , document.getElementById("root"));
