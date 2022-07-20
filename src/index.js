@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 const name = "Dark Batman";
 const img1 = "https://picsum.photos/200/300";
-const img2 = "https://picsum.photos/250/300";
-const img3 = "https://picsum.photos/300/300";
+const img2 = "https://picsum.photos/300/300";
+const img3 = "https://picsum.photos/400/300";
 const link = "https://yashpandey.netlify.app/"
 
 ReactDOM.render(
