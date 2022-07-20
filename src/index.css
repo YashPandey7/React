@@ -1,0 +1,22 @@
+*{
+    margin: 0px ;
+    padding: 0px ;
+    box-sizing: border-box;
+}
+.a{
+    text-align: center;
+    margin: 40px 0px;
+    color: #004f80;
+    font-size: 44px;
+    font-family: 'Lato', sans-serif;
+}
+
+.b{
+    text-align: center;
+}
+
+.b img
+{
+    width: 300px;
+    height: 300px;
+}

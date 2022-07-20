@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css'
 
 const name = "Dark Batman";
 const img1 = "https://picsum.photos/200/300";
@@ -9,13 +10,15 @@ const link = "https://yashpandey.netlify.app/"
 
 ReactDOM.render(
     <>
-        <h1 contentEditable="true">Hii Its {name}</h1>
-        <a href={link} target="_blank">
-            <img src={img1} />
-        </a>
+        <h1 className='a'>Hi It's {name}</h1>
+
+        <div className='b'>
+            <a href={link} target="_blank">
+                <img src={img1} />
+            </a>
             <img src={img2} />
             <img src={img3} />
-        
+        </div>
     </>,
     document.getElementById('root')
 );
