@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const fname = "Dark" , lname = "Batman" ;
-const d = new Date();
+const name = "Dark Batman";
+const img1 = "https://picsum.photos/200/300";
+const img2 = "https://picsum.photos/250/300";
+const img3 = "https://picsum.photos/300/300";
+const link = "https://yashpandey.netlify.app/"
 
 ReactDOM.render(
     <>
-        <h1>{`My name is ${fname} ${lname}`}</h1>
-        <p>{`But you can call me just "${lname}" 😂`}</p>
-        <p>{`Todays Date is ${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`}</p>
-        <p>{`Todays Time is ${d.toLocaleTimeString()}`}</p>
-    </>
-, document.getElementById("root"));
+        <h1 contentEditable="true">Hii Its {name}</h1>
+        <a href={link} target="_blank">
+            <img src={img1} />
+        </a>
+            <img src={img2} />
+            <img src={img3} />
+        
+    </>,
+    document.getElementById('root')
+);
