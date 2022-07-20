@@ -1,24 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'
+import './index.css';
 
-const name = "Dark Batman";
-const img1 = "https://picsum.photos/200/300";
-const img2 = "https://picsum.photos/300/300";
-const img3 = "https://picsum.photos/400/300";
-const link = "https://yashpandey.netlify.app/"
+let a = new Date();
+let b = a.getHours();
+let c = '';
+let sty = {};
+
+if (b >= 0 && b < 12) {
+    c = 'Good Morning';
+    sty.color = 'green';
+}
+else if (b >= 12 && b < 17) {
+    c = 'Good Afternoon';
+    sty.color = 'orange';
+}
+else if (b >= 17 && b <20 ) {
+    c = 'Good evening';
+    sty.color = 'blue';
+}
+else {
+    c = 'Good Night';
+    sty.color = 'black';
+}
 
 ReactDOM.render(
     <>
-        <h1 className='a'>Hi It's {name}</h1>
-
-        <div className='b'>
-            <a href={link} target="_blank">
-                <img src={img1} />
-            </a>
-            <img src={img2} />
-            <img src={img3} />
-        </div>
+        <h1 style={{color : 'rgb(180, 100, 139)'}}>Hello sir, <span style={sty}>{c}</span> </h1>
     </>,
     document.getElementById('root')
 );

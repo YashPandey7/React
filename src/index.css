@@ -3,20 +3,17 @@
     padding: 0px ;
     box-sizing: border-box;
 }
-.a{
+
+body{
+    background-color: #a5d7ef ;
+}
+
+
+div{
     text-align: center;
-    margin: 40px 0px;
-    color: #004f80;
-    font-size: 44px;
+    margin-top: 50px;
+    font-size: 22px;
     font-family: 'Lato', sans-serif;
-}
-
-.b{
-    text-align: center;
-}
-
-.b img
-{
-    width: 300px;
-    height: 300px;
+    background-color: antiquewhite;
+    padding: 20px;
 }
