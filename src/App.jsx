@@ -1,17 +1,17 @@
 import React from 'react';
-import Para from './Para';
-import List from './List';
+import {add , sub , mult , div } from './Cal';
 
-function App() {
-    return (
+function App(){
+    return(
         <>
-            <Para />
-            <List />
-        </>
+        <ol>
+            <li>{add(10,3)}</li>
+            <li>{sub(10,3)}</li>
+            <li>{mult(10,3)}</li>
+            <li>{div(10,3)}</li>
+        </ol>
+    </>
     );
 }
- const name = "Yash Pandey";
- const nm = "Dark Batman";
-
+    
 export default App;
-export {name,nm};
