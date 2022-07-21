@@ -10,5 +10,8 @@ function App() {
         </>
     );
 }
+ const name = "Yash Pandey";
+ const nm = "Dark Batman";
 
 export default App;
+export {name,nm};
