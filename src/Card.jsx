@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from './Image';
 
 function Card(props)
 {
@@ -6,7 +7,7 @@ function Card(props)
         <>
             <div className="card">
                 <h1>{props.fname}</h1>
-                <img src={props.imgsrc}/>
+                <Image imgsrc={props.imgsrc}/>
             </div>
         </>
     );
