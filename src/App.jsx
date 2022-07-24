@@ -1,23 +1,26 @@
 import React from 'react';
-import Card from './Card';
+import { Else } from './Else';
 import './index.css';
-import Sdata from './Sdata';
+import { Mcu } from './Mcu';
 
 
+const out = "mcu";
+
+const Favs = () => {
+if(out === "mcu")
+{
+    return  <Mcu/>
+}
+else{
+    return <Else/>
+}
+}
 
 function App() {
     return (
         <>
             <div class="row">
-                {Sdata.map((val)=> {
-                    return (
-                        <>
-                            <div class="col-md-4">
-                                <Card key={val.id} fname={val.fname} imgsrc={val.imgsrc} />
-                            </div>
-                        </>
-                    );
-                })}
+                <Favs />
             </div>
         </>
     );
