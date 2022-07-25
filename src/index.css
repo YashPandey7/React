@@ -27,11 +27,11 @@ img{
 }
 
 button{
-    padding: 8px;
+    padding: 10px 20px;
+    font-size: 20px;
     background-color: rgb(94, 93, 93);
     color: rgb(240, 245, 249);
     border: none;
-    margin-top: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -43,4 +43,8 @@ h1{
     text-align: center;
     margin: 20px;
     font-family: 'Lato', sans-serif;
+}
+
+.ab{
+    text-align: center;
 }

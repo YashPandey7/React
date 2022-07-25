@@ -1,27 +1,18 @@
-import React from 'react';
-import { Else } from './Else';
-import './index.css';
-import { Mcu } from './Mcu';
+import React, { useState } from 'react';
 
+const App = () => {
+    const a = new Date().toLocaleTimeString();
+    const [time , updte] = useState(a);
 
-const out = "mcu";
+    
+    setInterval(() => {
+        const a = new Date().toLocaleTimeString();
+        updte(a);
+    }, 1000);
 
-const Favs = () => {
-if(out === "mcu")
-{
-    return  <Mcu/>
-}
-else{
-    return <Else/>
-}
-}
-
-function App() {
     return (
         <>
-            <div class="row">
-                <Favs />
-            </div>
+            <h1>{time}</h1>
         </>
     );
 }
