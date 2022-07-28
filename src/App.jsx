@@ -1,25 +1,21 @@
 import React, { useState } from 'react';
 
-function App()
-{
-    const color = "#8e44ad";
-    const [bg , setbg ] = useState(color);
+function App (){
+    const time = new Date().toLocaleTimeString();
+    const [exacttime ,updatetime] = useState(time);
 
-    const [btncol , setbtnbg ] = useState('#9b59b6');
-
-    const [txt , settxt ] = useState('Click Me');
-
-    const onClk = () =>{
-        const color = "#008080";
-        setbg(color);
-        setbtnbg('#2c3e8b');
-        settxt('Hello 😃');
+    const onclick = () =>{
+        const time = new Date().toLocaleTimeString();
+        updatetime(time);
     }
+    
+    setInterval(onclick , 1000);
 
-    return (
+    return(
         <>
-            <div className='div' style={{backgroundColor: bg}}>
-                <button className='ac' onClick={onClk} style={{backgroundColor:btncol}}>{txt}</button>
+            <div>
+                <h1>Time {exacttime}</h1>
+                {/* <button onClick={onclick}>Get Time</button> */}
             </div>
         </>
     );
