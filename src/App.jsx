@@ -2,35 +2,48 @@ import React, { useState } from 'react';
 
 const App = () => 
 {
-    const [name , setname]= useState('');
-    const [clkname , setclk ] =useState('');
+    const [fullname , setfullname]= useState({
+        fname : '',
+        lname : ''
+    } );
 
-    const inputevent1 = (event) => {
-        setname(event.target.value);
-    }
+    const inputevent = (event) => {
+        // console.log(event.target.value);
+        // console.log(event.target.name);
 
-    const [email ,setemail] = useState('');
-    const [clkemail , setclkemail] = useState('');
-    const inputevent2 = (event) => {
-        setemail(event.target.value);
-    }
+        const value = event.target.value;
+        const name = event.target.name;
+        
+        setfullname((b) => {
+            if(name === 'n_fname'){
+               return{
+                fname : value,
+                lname : b.lname
+               };
+            }
+            else if(name === 'n_lname'){
+                return{
+                    fname : b.fname,
+                    lname : value 
+                };
+            }
+        })
+    };
 
     const onclk = (a) =>{
         a.preventDefault();
-        setclk(name);
-        setclkemail(email);
-    }
+    };
 
     return(
         <>
         <div style={{textAlign:'center'}}>
         <form onSubmit={onclk}>
             <h1>
-                {`Hi ${clkname}`} <br/> {`Your email Id is ${clkemail}`}
+                {`Hi ${fullname.fname} ${fullname.lname}`}
             </h1>
-            <input type='text' placeholder='Enter your name...' onChange={inputevent1} value={name}/>
+            <input type='text' placeholder='Enter your fname...' onChange={inputevent} name='n_fname'/>
             <br/><br/>
-            <input type='text' placeholder='Enter your email...' onChange={inputevent2} value={email}/>
+            <input type='text' placeholder='Enter your lmail...' onChange={inputevent} name='n_lname'/>
             <br/><br/>
             <button type='submit'>Submit</button>
         </form>
