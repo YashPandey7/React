@@ -4,7 +4,9 @@ const App = () =>
 {
     const [fullname , setfullname]= useState({
         fname : '',
-        lname : ''
+        lname : '',
+        email : '',
+        phone : ''
     } );
 
     const inputevent = (event) => {
@@ -18,13 +20,33 @@ const App = () =>
             if(name === 'n_fname'){
                return{
                 fname : value,
-                lname : b.lname
+                lname : b.lname,
+                email : b.email,
+                phone : b.phone
                };
             }
             else if(name === 'n_lname'){
                 return{
                     fname : b.fname,
-                    lname : value 
+                    lname : value,
+                    email : b.email,
+                    phone : b.phone 
+                };
+            }
+            else if(name === 'n_email'){
+                return{
+                    fname : b.fname,
+                    lname : b.lname ,
+                    email : value,
+                    phone : b.phone
+                };
+            }
+            else if(name === 'n_number'){
+                return{
+                    fname : b.fname,
+                    lname : b.lname,
+                    email : b.email,
+                    phone : value 
                 };
             }
         })
@@ -32,6 +54,7 @@ const App = () =>
 
     const onclk = (a) =>{
         a.preventDefault();
+        alert('Submitted successfully');
     };
 
     return(
@@ -41,9 +64,15 @@ const App = () =>
             <h1>
                 {`Hi ${fullname.fname} ${fullname.lname}`}
             </h1>
-            <input type='text' placeholder='Enter your fname...' onChange={inputevent} name='n_fname'/>
+            <p>Your Email is {fullname.email}</p>
+            <p>Your Phone Number is {fullname.phone}</p>
+            <input type='text' placeholder='Enter your first name...' onChange={inputevent} name='n_fname'/>
             <br/><br/>
-            <input type='text' placeholder='Enter your lmail...' onChange={inputevent} name='n_lname'/>
+            <input type='text' placeholder='Enter your Last name...' onChange={inputevent} name='n_lname'/>
+            <br/><br/>
+            <input type='email' placeholder='Enter your Email...' onChange={inputevent} name='n_email'/>
+            <br/><br/>
+            <input type='number' placeholder='Enter your Phone number...' onChange={inputevent} name='n_number'/>
             <br/><br/>
             <button type='submit'>Submit</button>
         </form>
