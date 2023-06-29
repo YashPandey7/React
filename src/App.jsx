@@ -43,7 +43,7 @@ const App = () =>
             </h1>
             <input type='text' placeholder='Enter your fname...' onChange={inputevent} name='n_fname'/>
             <br/><br/>
-            <input type='text' placeholder='Enter your lmail...' onChange={inputevent} name='n_lname'/>
+            <input type='text' placeholder='Enter your lname...' onChange={inputevent} name='n_lname'/>
             <br/><br/>
             <button type='submit'>Submit</button>
         </form>
